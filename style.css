@@ -1,0 +1,543 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+body{
+    background-color:#161616;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.container .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+.container .header:before{
+content:"ADIDAS";
+position: absolute;
+top: 58%;
+left: 57%;
+color: rgba(180, 164, 164, .603);
+font-size: 150px;
+opacity: 0.1;
+font-weight: bold;
+letter-spacing: 5px;
+z-index: -1;
+}
+
+.container .header i{
+    color: #fff;
+    cursor: pointer;
+}
+.container .header p{
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+.container .header .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .header .logo-two{
+    height: 10px;
+}
+.container .header .line{
+    display: block;
+    width: 45px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    margin-right: 4px;
+
+}
+/* ROW */
+
+.container .row{
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.container .col-2{
+    flex-basis: 50%;
+    min-width: 300px
+}
+.container .row .col-2 h1{
+    color: #fff;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    margin: 25px;
+}
+.container .row .col-2 p{
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+
+
+}
+.container .row .col-2 .btn{
+    display:inline-block;
+    margin-top: 45px;
+    border-top: 50px;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 20px;
+    background-color: #e0484b;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 1s;
+}
+.container .row .col-2 .btn:hover{
+    background-color: red;
+}
+/* Ring */ 
+
+.col-2 .ring img{
+    width: 100%;
+    max-width: 580px;
+}
+#circle-ring{
+    padding-left: 10%;
+    padding-top: 2%;
+    position: relative;
+}
+.col-2 .ring{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 3px solid #3c3c3c ;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.col-2 .ring:before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #fff12e;
+    border-right: 3px solid #fff12e;
+    border-radius: 50%;
+    z-index: -1;
+    /*
+    animation-name: returncircle;
+    animation-timing-function: 10sn;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+
+    animation: returncircle 10s linear infinite;
+}
+
+.col-2 .ring .circle{
+    display: block;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: #fff12e;
+    background: transparent;
+    transform-origin: left;
+    z-index: -1;
+    animation: return 10s linear infinite;
+
+
+}
+.col-2 .ring .circle:before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background: #fff12e;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff12e;
+    z-index: -1;
+}
+
+@keyframes returncircle2 {
+    0%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(-405deg);
+    }
+        }
+    
+    @keyframes return2{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
+         } 
+    
+
+@keyframes returncircle {
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+    }
+
+@keyframes return{
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(405deg);
+    }
+     }
+
+
+    
+.col-2 .ring-two {
+        position: absolute;
+        top: -5%;
+        left: 12%;
+        width: 500px;
+        height: 500px;
+        background: transparent;
+        border: 3px solid #3c3c3c ;
+        border-radius: 50%;
+    
+    }
+    .col-2 .ring-two:before{
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 100%;
+        height: 100%;
+        border: 3px solid transparent;
+        border-bottom: 3px solid #fff12e;
+        border-left: 3px solid #fff12e;
+        border-radius: 50%;
+        animation: returncircle2 10s linear infinite;
+    }
+.col-2 .ring-two .circle-two{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: #fff12e;
+    background: transparent ;
+    transform-origin: left;
+    animation: return2 10s linear infinite;
+
+}
+.col-2 .ring-two .circle-two:before{
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 16px;
+    height: 16px;
+    background: #fff12e;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff12e;
+}
+
+.btn-exp{
+    padding: 30px;
+}
+
+
+
+/* 
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+body{
+    background-color:#161616;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.container .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+.container .header:before{
+content:"ADIDAS";
+position: absolute;
+top: 58%;
+left: 57%;
+color: rgba(180, 164, 164, .603);
+font-size: 150px;
+opacity: 0.1;
+font-weight: bold;
+letter-spacing: 5px;
+z-index: -1;
+}
+
+.container .header i{
+    color: #fff;
+    cursor: pointer;
+}
+.container .header p{
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+.container .header .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .header .logo-two{
+    height: 4px;
+}
+.container .header .line{
+    display: block;
+    width: 45px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    margin-right: 4px;
+
+}
+/* ROW */
+/*
+.container .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+    .container .col-2{
+        flex-basis: 50%;
+        min-width: 300px
+    }
+    .container .row .col-2 h1{
+        color: #fff;
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: bolder;
+        letter-spacing: 3px;
+        margin: 25px;
+    }
+    .container .row .col-2 p{
+        color: #fff;
+        font-size: 14px;
+        line-height: 30px;
+    
+    }
+    .container .row .col-2 .btn{
+        display: inline;
+        border-top: 50px;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 20px;
+        background-color: #e0484b;
+        border-radius: 35px;
+        font-weight: bold;
+        font-size: 15px;
+        transition: all 1s;
+    }
+    .container .row .col-2 .btn:hover{
+        background-color: red;
+    }
+     
+    
+    .col-2 .ring img{
+        width: 100%;
+        max-width: 580px;
+    
+    }
+    #circle-ring{
+        padding-left: 10%;
+        padding-top: 2%;
+    }
+    .col-2 .ring{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: transparent;
+        border: 3px solid #3c3c3c ;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+    .col-2 .ring:before{
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 100%;
+        height: 100%;
+        border: 3px solid transparent;
+        border-top: 3px solid #fff12e;
+        border-right: 3px solid #fff12e;
+        border-radius: 50%;
+        z-index: -1;*/
+        /*
+        animation-name: returncircle;
+        animation-timing-function: 10sn;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; */
+        /*
+    
+        animation: returncircle 10s linear infinite;
+    }
+    
+    .col-2 .ring .circle{
+        display: block;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 4px;
+        background: #fff12e;
+        background: transparent;
+        transform-origin: left;
+        z-index: -1;
+        animation: return 10s linear infinite;
+    
+    
+    }
+    .col-2 .ring .circle:before{
+        content: "";
+        position: absolute;
+        top: -6px;
+        right: -9px;
+        width: 16px;
+        height: 16px;
+        background: #fff12e;
+        border-radius: 50%;
+        box-shadow: 0 0 20px #fff12e;
+        z-index: -1;
+    }
+    
+    @keyframes returncircle2 {
+        0%{
+            transform: rotate(-45deg);
+        }
+        100%{
+            transform: rotate(-405deg);
+        }
+            }
+        
+        @keyframes return2{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(-360deg);
+            }
+             }
+        
+    
+    @keyframes returncircle {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+        }
+    
+    @keyframes return{
+        0%{
+            transform: rotate(45deg);
+        }
+        100%{
+            transform: rotate(405deg);
+        }
+         }
+    
+    .col-2 .ring-two {
+            position: absolute;
+            top: 5%;
+            left: 54%;
+            width: 500px;
+            height: 500px;
+            background: transparent;
+            border: 3px solid #3c3c3c ;
+            border-radius: 50%;
+        
+        }
+        .col-2 .ring-two:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-bottom: 3px solid #fff12e;
+            border-left: 3px solid #fff12e;
+            border-radius: 50%;
+            animation: returncircle2 10s linear infinite;
+        }
+    .col-2 .ring-two .circle-two{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 4px;
+        background: #fff12e;
+        background: transparent;
+        transform-origin: left;
+        animation: return2 10s linear infinite;
+    
+    }
+    .col-2 .ring-two .circle-two:before{
+        content: "";
+        position: absolute;
+        top: -6px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        background: #fff12e;
+        border-radius: 50%;
+        box-shadow: 0 0 20px #fff12e;
+    }
+    
+    
+*/
