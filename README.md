@@ -1,4 +1,4 @@
-# ProjeOkul
+# ürün tanıtımı
 
 <h1>Ürün Sunumu</h1>
 
